@@ -11,7 +11,9 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "@svgdotjs/svg.js": "^3.2.3",
         "colors": "^1.4.0",
+        "fs": "^0.0.1-security",
         "inquirer": "^8.2.6"
     },
     "devDependencies": {

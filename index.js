@@ -28,6 +28,12 @@ const questions = [
             const isColor = /^[a-zA-Z]+$/.test(value) || /^#[0-9A-F]{6}$/i.test(value);
             return isColor ? true : 'Please enter a valid color (color keyword or hexadecimal).';
         }
+    }, 
+    {
+        type: 'list',
+        name: 'shape',
+        message: 'Please select a shape:',
+        choices: shapeOptions
     },
     {
         type: 'input',
@@ -38,12 +44,6 @@ const questions = [
             const isColor = /^[a-zA-Z]+$/.test(value) || /^#[0-9A-F]{6}$/i.test(value);
             return isColor ? true : 'Please enter a valid color (color keyword or hexadecimal).';
         }
-    },
-    {
-        type: 'list',
-        name: 'shape',
-        message: 'Please select a shape:',
-        choices: shapeOptions
     },
 ];
 

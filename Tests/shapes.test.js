@@ -1,48 +1,36 @@
-const Shapes = require('../Lib/shapes'); // Assuming Shapes class is defined in 'Lib/Shapes.js'
-const fs = require('fs'); // For file system operations (optional for saving SVG)
+const { Circle, Square, Triangle } = require('../Lib/shapes');
+
+describe('Circle', () => {
+    it('should render a circle with the correct fill color', () => {
+        const circle = new Circle();
+        circle.setColor('red');
+        const svg = circle.render();
+        expect(svg).toContain('<circle cx="150" cy="100" r="80" fill="red" />');
+    });
+});
+
+describe('Square', () => {
+    it('should render a square with the correct fill color', () => {
+        const square = new Square();
+        square.setColor('blue');
+        const svg = square.render();
+        expect(svg).toContain('<rect x="50" y="50" width="300" height="300" fill="blue" />');
+    });
+});
+
+describe('Triangle', () => {
+    it('should render a triangle with the correct fill color', () => {
+        const triangle = new Triangle();
+        triangle.setColor('green');
+        const svg = triangle.render();
+        expect(svg).toContain('<polygon points="150,20 250,180 50,180" fill="green" />');
+    });
+});
 
 describe('Shapes', () => {
-  let shapes;
-
-  beforeEach(() => {
-    shapes = new Shapes(300, 200); // Initialize Shapes instance with canvas size 300x200
-  });
-
-  test('should draw a circle', () => {
-    shapes.drawCircle(50, 50, 30, { fill: 'blue' });
-    const svg = shapes.render();
-    // Assertions for circle
-    expect(svg).toContain('<circle'); // Check if SVG contains a circle element
-    expect(svg).toContain('cx="50"');
-    expect(svg).toContain('cy="50"');
-    expect(svg).toContain('r="30"');
-    expect(svg).toContain('fill="blue"');
-  });
-
-  test('should draw a square', () => {
-    shapes.drawSquare(100, 50, 60, { fill: 'green' });
-    const svg = shapes.render();
-    // Assertions for square
-    expect(svg).toContain('<rect'); // Check if SVG contains a rect element
-    expect(svg).toContain('x="100"');
-    expect(svg).toContain('y="50"');
-    expect(svg).toContain('width="60"');
-    expect(svg).toContain('height="60"'); // Assuming square size is defined by width
-    expect(svg).toContain('fill="green"');
-  });
-
-  test('should draw a triangle', () => {
-    shapes.drawTriangle('0,0 100,0 50,100', { fill: 'yellow' });
-    const svg = shapes.render();
-    // Assertions for triangle
-    expect(svg).toContain('<polygon'); // Check if SVG contains a polygon element
-    expect(svg).toContain('points="0,0 100,0 50,100"');
-    expect(svg).toContain('fill="yellow"');
-  });
-
-  // Optionally, you can save the SVG to a file for manual inspection
-  afterAll(() => {
-    const svg = shapes.render();
-    fs.writeFileSync('shapes.svg', svg); // Save SVG to a file
-  });
+    it('should set the color correctly', () => {
+        const shape = new Shapes();
+        shape.setColor('yellow');
+        expect(shape.color).toBe('yellow');
+    });
 });

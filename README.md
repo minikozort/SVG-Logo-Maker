@@ -10,3 +10,5 @@ Open terminal in vscode, please download and install necessary packages first. T
 Github Repository : https://github.com/minikozort/SVG-Logo-Maker
 Google Mock-up Video : 
 
+![alt text](SVG-LOGO-MAKER-QandA.PNG)
+![alt text](SVG-LOGO-MAKER-TESTS.PNG)

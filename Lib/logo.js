@@ -1,17 +1,34 @@
-
-
+// Lib/logo.js
 class Logos {
     constructor(text) {
-      if (text.length > 3) {
-        throw new Error('Entered text must not exceed 3 characters');
-      }
-      this.text = text;
+        this.text = text;
+        this.textColor = 'black'; // Default text color
+        this.logoColor = 'blue'; // Default logo color
     }
-  
+
+    // Setter methods
+    setTextColor(color) {
+        this.textColor = color;
+    }
+
+    setLogoColor(color) {
+        this.logoColor = color;
+    }
+
+    // Getter methods
     getText() {
-      return this.text;
+        return this.text;
     }
-  }
-  
-  module.exports = Logos;
-  
+
+    getTextColor() {
+        return this.textColor;
+    }
+
+    getLogoColor() {
+        return this.logoColor;
+    }
+
+    // Additional methods as needed for logo manipulation/rendering
+}
+
+module.exports = Logos;

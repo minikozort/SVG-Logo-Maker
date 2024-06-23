@@ -66,7 +66,7 @@ class Logo {
 
     saveToFile(fileName) {
         const svgContent = this.generateSVG();
-        const filePath = path.join(__dirname, '..', 'Examples', fileName);
+        const filePath = path.join(__dirname, '..', fileName);
         fs.writeFileSync(filePath, svgContent);
         console.log(`Logo successfully generated and saved as ${filePath}.`);
     }

@@ -8,7 +8,11 @@ How to Run:
 Open terminal in vscode, please download and install necessary packages first. To install - type in "npm install" and press enter - this will install the necessary packages that are needed to run the app. Then type in "node index.js" and press enter, user will be prompted a series of questions that can create a logo of their choosing. Once user answers all questions, an SVG file will be created with their color and text selections under Examples folder. User can click on this file for preview and save the file if they like it. For the colors, user can either type the color itself or a hexadecimal number of their choosing.
 
 Github Repository : https://github.com/minikozort/SVG-Logo-Maker
-Google Mock-up Video : 
+Google Mock-up Video : https://www.loom.com/share/0ce9ab43bc0f4c37ab6c3026e3e74fb4?sid=a31ebe81-aa89-44ff-b2ef-8595445a2ac0
 
-![alt text](SVG-LOGO-MAKER-QandA.PNG)
-![alt text](SVG-LOGO-MAKER-TESTS.PNG)
+![Alt Text](./Example%20Pictures/SVG-LOGO-MAKER-CIRCLE.PNG)
+![Alt Text](./Example%20Pictures/SVG-LOGO-MAKER-SQUARE.PNG)
+![Alt Text](./Example%20Pictures/SVG-LOGO-MAKER-TRIANGLE.PNG)
+![Alt Text](./Example%20Pictures/SVG-LOGO-MAKER-QandA.PNG)
+![Alt Text](./Example%20Pictures/SVG-LOGO-MAKER-TESTS.PNG)
+
